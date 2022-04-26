@@ -1,0 +1,44 @@
+{% extends '/user/layout.html' %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-12 m-auto">
+    <div class="container ">
+
+      <ul class="list-group mt-5 ">
+
+        <li class="list-group-item"> <span class="text-center font-weight-bold" style="color: #632343;"> Name
+            : </span>  {{val[1]}} {{val[2]}} <br> <b>Place :</b>  {{val[4]}}<br><b>PhoneNumber :</b>  {{val[7]}}</li>
+        <li class="list-group-item"><span class="text-center font-weight-bold" style="color: #632343;">Service
+            : </span>{{val[8]}}</li>
+        <li class="list-group-item"><span class="text-center font-weight-bold" style="color: #632343;">Skill &
+            Experience
+            :</span> {{val[12]}} {{val[13]}}</li>
+        <li class="list-group-item"><span class="text-center font-weight-bold" style="color: #632343;">Works
+            : </span>{{val[14]}}</li>
+
+        <a href="/Work_Request " class="btn btn-primary  mt-3 float-right"> Work Request</a>
+      </ul>
+      <label for="" class="mt-5 font-weight-bold">FeedBacks</label>
+      {% for i in val1%}
+      <ul class="list-group  mb-5 ">
+
+        <li class="list-group-item"> <span class="text-center font-weight-bold" style="color: #632343;"> User Name
+            : </span>  {{i[1]}} {{i[2]}} <br> <b>Place :</b> {{i[3]}}  <br> <b>PhoneNumber :</b> {{i[6]}} </li>
+        <li class="list-group-item"><span class="text-center font-weight-bold" style="color: #632343;">FeedBack
+            : </span><br><b>Date :</b>  {{i[11]}} <br><b> Commets :</b> {{i[9]}}</li>
+
+
+      </ul>
+      {% endfor %}
+
+
+
+    </div>
+  </div>
+  </form>
+
+</div>
+
+</div>
+{% endblock %}

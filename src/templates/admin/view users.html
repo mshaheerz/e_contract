@@ -1,0 +1,23 @@
+{% extends '/admin/layout.html' %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-12 m-auto">
+      <div class="container ">
+
+  <table  class="table mt-3 ">
+    <tr>
+      <th scope="col">Name </th>
+      <th scope="col">Address </th>
+      <th scope="col">phone </th>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>{{i[1]}} {{i[2]}}</td>
+      <td><b>Place</b>  : {{i[3]}} <br><b>Post</b>  : {{i[4]}} <br><b>PinNumber</b>  : {{i[5]}}</td>
+      <td>&nbsp;{{i[6]}}</td>
+    </tr>
+      {% endfor %}
+  </table>
+</div>
+{% endblock %}
